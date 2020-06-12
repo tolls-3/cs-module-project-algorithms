@@ -4,8 +4,14 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    obj = set()
 
-    pass
+    for num in arr:
+        if num in obj:
+            obj.remove(num)
+        else:
+            obj.add(num)
+    return obj.pop()
 
 
 if __name__ == '__main__':
